@@ -94,18 +94,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-     },
+     }
 
-    'custom' : {
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : "human",
-        'USER' : 'human',
-        'PASSWORD' : '1234',
-        'HOST' : '15.164.153.191',
-        'PORT' : 3306
-    }
-}
-DATABASE_ROUTERS = ['thirdapp.router.DBRouter']
 
 
 # Password validation
