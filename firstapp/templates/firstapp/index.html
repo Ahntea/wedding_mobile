@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>윤희 재영의 결혼식</title>
+    <meta content="이윤희와 안재영의 결혼식에 와서 축하해주세요~!" name="description"/>
+    <meta property="og:image" content="/static/img/ori00.jpg">
+    <meta property="fb:app_id" content="781066922265598" />
+    <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="/static/css/ekko-lightbox.css" rel="stylesheet">
+    <link href="/static/style/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Gugi|Noto+Serif+KR|Stylish|Sunflower:300"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function sendMail() {
+
+            (function () {
+                emailjs.init("user_yjLL5xG0A3kkOCH5BGIDh");
+                emailjs.send("wedding-mail", "gift_send", {
+                    name: $("#sender-name").value,
+                    gift: $("#gift-name").text(),
+                    message: $("#sender-message").value
+                }).then(function (response) {
+                    console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                }, function (err) {
+                    console.log("FAILED. error=", err);
+                });
+            })();
+        }
+
+        function findGetParameter(parameterName) {
+            var result = null,
+                tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function (item) {
+                  tmp = item.split("=");
+                  if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                });
+            return result;
+        }
+
+        $(document).ready(function () {
+
+            function getText(){
+                var result = null;
+                $.ajax( { url: "https://github.com/Ahntea/DDonggmae/blob/master/README.md",
+                        type: 'get',
+                        dataType: 'html',
+                        async: false,
+                        success: function(data) { result = data; }
+                    }
+                );
+                FileReady = true;
+                return result;
+            }
+            var markdown_source = getText();
+            var comment_contents = markdown_source.split("축하의 말")[1];
+
+            var md = new Remarkable();
+            $("#comments").append(md.render(comment_contents));
+
+            
+            if(findGetParameter('gift')=='false'){
+                $('#gifts').hide();
+            }
+        });
+
+
+
+
+    </script>
+        <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://youtu.be/33EWgjZ8Gic";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '360',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+
+</head>
+
+<body id="top">
+<header></header>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
+<div class="page-content">
+    <div class="div">
+        <div class="ww-home-page" id="home">
+            <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
+                <div class="container ww-announcement-container">
+                    <p class="ww-couple-name ww-title" style="font-size:4.0em">Yoonhee & Jaeyoung</p>
+                    <p class="h2 mt-5 ww-title" style="font-family: 'Gugi', cursive; font-size:1.0em">
+                        | WE ARE GETTING MARRIED |
+                    </p>
+                    <p class="h2 mt-5 ww-title"
+                       style="font-family: 'Noto Serif KR', serif; font-size:1.0em; letter-spacing:-1px">
+                        <b style="font-size:1.4em;">2021. 11. 14. SUN PM 02:00</b>
+                        <br>라마다 서울 신도림 호텔 그랜드 볼룸홀
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="ww-nav-bar sticky-top bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <button aria-controls="ww-navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                            class="navbar-toggler"
+                            data-target="#ww-navbarNav" data-toggle="collapse" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse text-uppercase" id="ww-navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#couple">Couple</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#events">Events</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="ww-section" id="couple">
+            <div class="container">
+                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">Bride & Groom</h2>
+                <div class="row text-center">
+                    <div class="col-md-6">
+                        <div class="mt-3">
+                            <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">
+                                이윤희</h3>
+                            <img alt="Groom" class="img-fluid" src="/static/img/ori11.jpg"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mt-3">
+                            <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">
+                                안재영</h3>
+                            <img alt="Bride" class="img-fluid" src="/static/img/ori13.jpg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ww-section bg-light" id="events">
+            <div class="container ww-wedding-event">
+                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">초대합니다</h2>
+                    <div class="col text-center mb-5">
+                        <h6 style="font-family: 'Noto Serif KR', serif;">
+                        </h6>
+                    </div>
+                <div class="row">
+                    <div class="col-md-7 col-sm-12">
+                        <div class="my-3">
+                            <div class="h4">웨딩 본식</div>
+                            <ul>
+                                <li>
+                                    <i class="text-muted fas fa-map-marker-alt"></i>
+				    <span class="pl-2 text-muted">라마다 서울 신도림 2F 그랜드 볼룸</span>
+                                </li>
+                                <li class="pt-2">
+                                    <i class="text-muted far fa-calendar-alt"></i>
+                                    <span class="pl-2 text-muted">2021년 11월 14일, 2:00PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12">
+                        <div class="my-3">
+                            <img alt="Wedding Party" class="img-fluid" src="/static/img/ori06.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 col-sm-12">
+                        <div class="my-3">
+                            <div class="h4">식사</div>
+                            <ul>
+                                <li>
+                                    <i class="text-muted fas fa-map-marker-alt "></i>
+                                    <span class="pl-2 text-muted">라마다 서울 신도림 3F</span>
+                                </li>
+                                <li class="pt-2">
+                                    <i class="text-muted far fa-calendar-alt "></i>
+                                    <span class="pl-2 text-muted">2021년 11월 14일, 2:30PM - 4:00PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12">
+                        <div class="my-3"><img alt="Reception" class="img-fluid" src="/static/img/ori04.jpg"/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	        <div class="ww-section ww-rsvp-detail" id="map">
+            <div class="container">
+                <div class="col text-center">
+                    <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">오시는 길</h2>
+                    <div>
+                        <h5 style="font-family: 'Noto Serif KR', serif;">라마다 신도림 서울 호텔 2층 그랜드볼룸홀</h5>
+                        <h6 style="font-family: 'Noto Serif KR', serif;">신도림역에서 도보 10분 </h6>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="my-3 text-center">
+                            <a href="http://naver.me/IMxLzjZc">
+                                <img alt="naver-map" class="map-icon" id="naver-map"
+                                     src="/static/img/map/naver-map.png"/>
+                            </a>
+                            <a href="http://kko.to/qo30NezfH">
+                                <img alt="kakao-map" class="map-icon" id="kakao-map"
+                                     src="/static/img/map/kakao-map.png"/>
+                            </a>
+                            <a href="https://goo.gl/maps/vQMP992ZpKifBrDG9">
+                                <img alt="google-map" class="map-icon" id="google-map"
+                                     src="/static/img/map/google-map.png"/>
+                            </a>
+                        </div>
+                        <div class="col text-center">
+                            <label style="font-family: 'Noto Serif KR', serif; font-size: 15px;">
+                                셔틀버스 - 신도림역에서 10분 간격 운행
+                            </label>
+                        </div>
+                        <div class="my-3">
+                            <iframe src="https://maps.google.com/maps?q=432-30,%20Sindorim-Dong,%20gu,%20Guro-gu,%20Seoul&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="ww-section" id="gallery">
+            <div class="ww-photo-gallery">
+                <div class="container">
+                    <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">포토 갤러리</h2>
+                    <div class="ww-gallery">
+                        <div class="card-columns">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 2" class="img-fluid" src="/static/img/ori05.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 3" class="img-fluid" src="/static/img/ori06.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 4" class="img-fluid" src="/static/img/ori07.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 5" class="img-fluid" src="/static/img/ori08.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card"
+                                 data-groups="[&quot;wedding&quot;,&quot;ceremony&quot;,&quot;party&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 6" class="img-fluid" src="/static/img/ori09.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 7" class="img-fluid" src="/static/img/ori00.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 8" class="img-fluid" src="/static/img/ori13.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 8" class="img-fluid" src="/static/img/ori14.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 8" class="img-fluid" src="/static/img/ori15.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 8" class="img-fluid" src="/static/img/ori16.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 8" class="img-fluid" src="/static/img/ori17.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 8" class="img-fluid" src="/static/img/ori18.jpg"/>
+                                </a>
+                            </div>
+                            <div class="card" data-groups="[&quot;vacation&quot;]">
+                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                    <img alt="Gallery Pic 8" class="img-fluid" src="/static/img/ori19.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="ww-section parallax-window  text-black" data-parallax="scroll" data-image-src="images/gift/gift-background.jpg" id="gifts">
+            <div class="ww-gift-section">
+                <div class="container">
+                    <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;"> 감사와 초대의 글</h2>
+                    <div class="col text-center mb-5">
+                        <h5 style="font-family: 'Noto Serif KR', serif;">
+                            환한 달 아래 서로의 손을 잡고 나누던 약속을<br>
+                            평생잊지 않겠습니다.<br>
+                            눈빛만 보아도 서로의 마음 깊은 곳까지 헤아리는<br>
+                            지혜와 배려를 평생 약속하겠습니다.<br>
+                            따뜻한 마음과 사랑으로<br>
+                            저희의 약속과 힘찬 출발을 축복해주세요<br>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div class="my-3">
+		<div class="container">
+			<iframe id="player" type="text/html" width="384" height="216"
+  			src="https://youtube.com/embed/33EWgjZ8Gic?enablejsapi=1"
+  			frameborder="0"></iframe>
+		</div>
+	</div>
+	<div class="bottom_left" height=20px>
+    		<audio autoplay controls src="/static/music/music.mp3"></audio>
+	</div>
+
+
+        <div class="ww-section bg-light" id="comment">
+            <div class="ww-photo-gallery">
+                <div class="container">
+                    <div class="col text-center">
+                        <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">축하메시지</h2><br>
+                        <div id="comments"></div>
+                        <br>
+                        <div class="row">
+                            <div class="col text-center"><form action="">
+                                <button class="btn btn-primary btn-submit" type="submit">메시지 남기러 가기</button></form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="giftMailModal" role="dialog"
+     tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">선물하기 - <span id="gift-name"></span></h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">보내는 분 성함</span>
+                    </div>
+                    <input aria-describedby="basic-addon3" class="form-control" id="sender-name" type="text">
+                </div>
+                <div class="input-group">
+                    <textarea aria-label="With textarea" class="form-control" id="sender-message"
+                              placeholder="신랑, 신부에게 선물 예약과 함께 보낼 메시지를 입력해주세요. 이 메시지는 신랑, 신부에게 발송됩니다." rows=4></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="reserveGiftButton" type="button">예약</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer></footer>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="/static/js/aos.js"></script>
+<script src="/static/js/parallax.min.js"></script>
+<script src="/static/js/ekko-lightbox.min.js"></script>
+<script src="/static/scripts/main.js"></script>
+
+<div class="bottom_right"><i class="fa fa-arrow-up fa-2x" id="go-to-top"></i>
+</div>
+
+</body>
+</html>

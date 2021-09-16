@@ -24,12 +24,11 @@ urlpatterns = [
     path('index1/', views.index1),
     path('index2/', views.index2),
     path('home/', c_views.home),
+    path('', c_views.root),
 
     path('dictway/', c_views.dictway),
     path('listway/', c_views.listway),
 
     path('first/', include('firstapp.urls')),
-    path('second/', include('secondapp.urls')),
-    path('third/', include('thirdapp.urls')),
     
 ]

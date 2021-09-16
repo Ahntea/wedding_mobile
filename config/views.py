@@ -27,3 +27,7 @@ def listway(request):
             },
         ], safe=False  # dictionary가 아닌 list와 같은 형태 사용시 반드시 해줘야함
         )
+
+def root(request):
+
+    return HttpResponse("<h1>THANK U EOT</h1>")

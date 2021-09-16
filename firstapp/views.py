@@ -51,3 +51,9 @@ def person(request):
         'data' : per
     }
     return render(request, 'firstapp/person.html', context)
+
+def yoonhee(request):
+    context = {
+        'data' : 1
+    }
+    return render(request, 'firstapp/index.html', context)
